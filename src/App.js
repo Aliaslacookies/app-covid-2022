@@ -3,7 +3,7 @@ import React from "react";
 import { Cards, Chart, CountryPicker } from './components';
 import { fetchData } from './api';
 import styles from './App.module.css'
-import image from './images/image.png';
+import image from './images/Chumel.jpg';
 import { style } from "@material-ui/system";
 
 class App extends React.Component {
@@ -25,16 +25,15 @@ class App extends React.Component {
   }
   render() {
     const { data, country } = this.state;
-
-    return (
-      <div className={styles.container}>
-      <img className={styles.image} src={image} alt="COVID-19" />
-      <div className={style.letra} > <h4> Por Hcristalv@gmail.com </h4></div>
-        <Cards data={data} />
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
-      </div>
-    );
+  
+      
+      return <div className={styles.container}>
+      <img className={styles.image} src={image} alt="Chumel" />
+      <div className={style.letra}> <h4> Por Hcristalv@gmail.com </h4></div>
+      <Cards data={data} />
+      <CountryPicker handleCountryChange={this.handleCountryChange} />
+      <Chart data={data} country={country} />
+    </div>;
   }
 }
 
